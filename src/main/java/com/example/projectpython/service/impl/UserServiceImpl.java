@@ -32,6 +32,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     @Override
     public Result register(User user) {
         String username = user.getUsername();
+        //根据用户名查询用户
         User user1 = query().eq("username", username).one();
         if (user1 != null) {
             return Result.fail("该手机号已注册");
