@@ -16,6 +16,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
 
+
+    /**
+     * 登陆方法
+     */
     @Override
     public Result login(User user) {
         String username = user.getUsername();
@@ -34,10 +38,13 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         String username = user.getUsername();
         //根据用户名查询用户
         User user1 = query().eq("username", username).one();
+        //判断是否为空
         if (user1 != null) {
             return Result.fail("该手机号已注册");
         }
+        //不为空，保存用户
         save(user);
+        //返回注册成功信息
         return Result.ok("注册成功");
     }
 }

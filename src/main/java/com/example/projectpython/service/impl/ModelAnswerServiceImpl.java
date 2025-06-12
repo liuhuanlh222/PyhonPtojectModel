@@ -2,9 +2,7 @@ package com.example.projectpython.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.example.projectpython.dto.Result;
-import com.example.projectpython.dto.UserHolder;
 import com.example.projectpython.entity.ModelAnswer;
-import com.example.projectpython.entity.User;
 import com.example.projectpython.mapper.ModelAnswerMapper;
 import com.example.projectpython.service.ModelAnswerService;
 import com.fasterxml.jackson.databind.JsonNode;

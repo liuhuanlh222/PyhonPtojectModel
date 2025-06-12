@@ -26,7 +26,6 @@ public class QuestionController {
         return modelAnswerService.askQuestion(id, question);
     }
 
-
     // 获取提问与回答
     @GetMapping("/get")
     public Result getQuestion(@RequestParam(value = "id") long id) {
